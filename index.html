@@ -13,12 +13,15 @@
       color: #f7f7fb;
     }
     * { box-sizing: border-box; }
+    .site-nav { position: fixed; z-index: 2; top: 24px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; padding: 6px; border: 1px solid rgba(255,255,255,.12); border-radius: 999px; background: rgba(16,19,34,.62); backdrop-filter: blur(14px); }
+    .site-nav a { padding: 9px 16px; border-radius: 999px; color: #b6b8c9; text-decoration: none; font-size: .88rem; transition: color .2s, background .2s; }
+    .site-nav a:hover, .site-nav a[aria-current="page"] { color: #fff; background: rgba(255,255,255,.1); }
     body {
       min-height: 100vh;
       margin: 0;
       display: grid;
       place-items: center;
-      overflow: hidden;
+      padding: 90px 0 30px;
       background:
         radial-gradient(ellipse at 17% 18%, rgba(95, 82, 255, .22), transparent 34%),
         radial-gradient(ellipse at 83% 79%, rgba(32, 214, 190, .15), transparent 35%),
@@ -55,6 +58,11 @@
 <body>
   <div class="orb orb-one" aria-hidden="true"></div>
   <div class="orb orb-two" aria-hidden="true"></div>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
   <main>
     <div class="eyebrow"><span class="spark" aria-hidden="true"></span> A little something to start</div>
     <h1>Hello,<span>World!</span></h1>
